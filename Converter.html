@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+
+    <!--    Font Awesome    -->
+    <script src="https://kit.fontawesome.com/8caf6297b0.js" crossorigin="anonymous"></script>
+
+    <!--    jQuery    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--    External Files  -->
+    <link rel="icon" href="images/Website_Logo.ico">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/MVWebScript.js"></script>
+</head>
+<body>
+    <div class="Con-main-container">
+        <div class="header top-title">Converter</div>
+        <nav class="navbar">
+            <a class="nv-logo" href="index.html"><img src="images/Website_Logo.ico" alt="#"></a>
+            <button class="nv-bars" type="button">
+                <i class="fa-solid fa-bars fa-2x fa-inverse"></i>
+                <i class="fa-solid fa-x fa-2x fa-inverse hid"></i>
+            </button>
+            <div class="nv-item1 nv-menu nv-toggle"><a href="index.html">Home</a></div>
+            <div class="nv-item2 nv-menu nv-toggle"><a href="About_Myself.html">About Myself</a></div>
+            <div class="nv-item3 nv-menu nv-toggle"><a href="Skills.html">Skills</a></div>
+            <div class="nv-item4 nv-menu nv-toggle"><a href="Portfolio.html">Portfolio</a></div>
+            <div class="nv-item5 nv-menu nv-toggle"><a href="Contact.html">Contact</a></div>
+        </nav>
+        <div class="container-conv">
+            <button class="L-btn showSingle-s sec-btn" id="L">Length</button>
+            <button class="W-btn showSingle-s sec-btn" id="W">Weight</button>
+            <button class="C-btn showSingle-s sec-btn" id="C">Currency</button>
+            <div class="container-L target-s">
+                <h1 class="L-title">Length Converter</h1>
+
+                <div class="L-km">Kilometers</div>
+                <input class="L-km-in" id="inputKilometers" type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+
+                <div class="L-mile">Miles</div>
+                <input class="L-mile-in" id="inputMiles" type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+
+                <div class="L-m">Meters</div>
+                <input class="L-m-in" id="inputMeters" type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+
+                <div class="L-feet">Feet</div>
+                <input class="L-feet-in" id="inputFeet" type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+
+                <div class="L-cm">Cm</div>
+                <input class="L-cm-in" id="inputCentimeters" type="number" placeholder="Centimeters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+
+                <div class="L-inch">Inches</div>
+                <input class="L-inch-in" id="inputInches" type="number" placeholder="Inches" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+            <div class="container-W target-s">
+                <h1 class="W-title">Weight Converter</h1>
+
+                <div class="W-kg">Kilograms</div>
+                <input class="W-kg-in" id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+
+                <div class="W-stone">Stones</div>
+                <input class="W-stone-in" id="inputStones" type="number" placeholder="Stones" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+
+                <div class="W-g">Grams</div>
+                <input class="W-g-in" id="inputGrams" type="number" placeholder="Grams" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+
+                <div class="W-pound">Pounds</div>
+                <input class="W-pound-in" id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+
+                <div class="W-mg">Milligrams</div>
+                <input class="W-mg-in" id="inputMilligrams" type="number" placeholder="Milligrams" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+
+                <div class="W-ounce">Ounces</div>
+                <input class="W-ounce-in" id="inputOunces" type="number" placeholder="Ounces" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+            </div>
+            <div class="container-C target-s">
+                <h1 class="C-title">Currency Converter</h1>
+
+                <div class="C-GBP">GBP</div>
+                <input class="C-GBP-in" id="inputGBP" type="number" placeholder="GBP" oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+
+                <div class="C-CHF">CHF</div>
+                <input class="C-CHF-in" id="inputCHF" type="number" placeholder="CHF" oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+
+                <div class="C-USD">USD</div>
+                <input class="C-USD-in" id="inputUSD" type="number" placeholder="USD" oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+
+                <div class="C-JPY">JPY</div>
+                <input class="C-JPY-in" id="inputJPY" type="number" placeholder="JPY" oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+
+                <div class="C-EUR">EUR</div>
+                <input class="C-EUR-in" id="inputEUR" type="number" placeholder="EUR" oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+
+                <div class="C-CNY">CNY</div>
+                <input class="C-CNY-in" id="inputCNY" type="number" placeholder="CNY" oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+            </div>
+        </div>
+        <button class="back-btn"><i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+    </div>
+</body>
+</html>

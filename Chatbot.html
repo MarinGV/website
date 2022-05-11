@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+
+    <!--    Font Awesome    -->
+    <script src="https://kit.fontawesome.com/8caf6297b0.js" crossorigin="anonymous"></script>
+
+    <!--    jQuery    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--    External Files  -->
+    <link rel="icon" href="images/Website_Logo.ico">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <script src="js/MVWebScript.js"></script>
+    <script src="js/Chatbot.js" defer></script>
+
+</head>
+<body>
+    <div class="CB-main-container">
+        <div class="header top-title">Chatbot</div>
+        <nav class="navbar">
+            <a class="nv-logo" href="index.html"><img src="images/Website_Logo.ico" alt="#"></a>
+            <button class="nv-bars" type="button">
+                <i class="fa-solid fa-bars fa-2x fa-inverse"></i>
+                <i class="fa-solid fa-x fa-2x fa-inverse hid"></i>
+            </button>
+            <div class="nv-item1 nv-menu nv-toggle"><a href="index.html">Home</a></div>
+            <div class="nv-item2 nv-menu nv-toggle"><a href="About_Myself.html">About Myself</a></div>
+            <div class="nv-item3 nv-menu nv-toggle"><a href="Skills.html">Skills</a></div>
+            <div class="nv-item4 nv-menu nv-toggle"><a href="Portfolio.html">Portfolio</a></div>
+            <div class="nv-item5 nv-menu nv-toggle"><a href="Contact.html">Contact</a></div>
+        </nav>
+        <div class="CB-container">
+            <div id="chat" class="chat">
+                <div id="messages" class="messages"></div>
+                <input class="cb-input" id="input" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
+            </div>
+            <button id="send" class="send-btn send-hide">Send</button>
+        </div>
+        <button class="back-btn"><i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+    </div>
+
+</body>
+</html>

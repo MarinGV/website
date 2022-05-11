@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Reader</title>
+
+    <!--    Font Awesome    -->
+    <script src="https://kit.fontawesome.com/8caf6297b0.js" crossorigin="anonymous"></script>
+
+    <!--    jQuery    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--    External Files  -->
+    <link rel="icon" href="images/Website_Logo.ico">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+    <script src="js/MVWebScript.js"></script>
+
+
+</head>
+<body>
+    <div class="QR-main-container">
+        <div class="header top-title">QR Reader</div>
+        <nav class="navbar">
+            <a class="nv-logo" href="index.html"><img src="images/Website_Logo.ico" alt="#"></a>
+            <button class="nv-bars" type="button">
+                <i class="fa-solid fa-bars fa-2x fa-inverse"></i>
+                <i class="fa-solid fa-x fa-2x fa-inverse hid"></i>
+            </button>
+            <div class="nv-item1 nv-menu nv-toggle"><a href="index.html">Home</a></div>
+            <div class="nv-item2 nv-menu nv-toggle"><a href="About_Myself.html">About Myself</a></div>
+            <div class="nv-item3 nv-menu nv-toggle"><a href="Skills.html">Skills</a></div>
+            <div class="nv-item4 nv-menu nv-toggle"><a href="Portfolio.html">Portfolio</a></div>
+            <div class="nv-item5 nv-menu nv-toggle"><a href="Contact.html">Contact</a></div>
+        </nav>
+        <div class="container-qr">
+            <div class="qr-btns">
+                <button class="qr-btn1 qr-btn-or" id="startButton">Start</button>
+                <button class="qr-btn2 qr-btn-or" id="resetButton">Reset</button>
+            </div>
+            <div class="qr-video">
+                <video id="video" width="300" height="200"></video>
+            </div>
+            <div class="qr-cvs" id="sourceSelectPanel">
+                <label class="qr-cvs-txt" for="sourceSelect"><b>Change video source:</b></label>
+                <select class="qr-cvs-cho" id="sourceSelect"></select>
+            </div>
+            <div class="qr-ds" style="display: table">
+                <label for="decoding-style"><b>Decoding Style:</b></label>
+                <select id="decoding-style" size="1">
+                    <option value="once">Decode once</option>
+                    <option value="continuously">Decode continuously</option>
+                </select>
+            </div>
+            <div class="qr-res">
+                <p class="qr-res-txt"><b>Result:</b></p>
+                <p class="qr-res-res" id="result"></p>
+            </div>
+        </div>
+        <button class="back-btn"><i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
+    </div>
+</body>
+</html>
+
+<!doctype html>
+<html lang="en">
